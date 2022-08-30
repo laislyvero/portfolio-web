@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,500;0,700;1,400;1,500&family=Jost:ital,wght@1,100&family=Roboto:wght@100&family=Tajawal&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    list-style: none;
+    box-sizing: border-box;
+}
+:root{
+    --bg-color:#191d2d;
+    --secondary-bg-color:crimison;
+    --text-color:#fff;
+
+}
+body{
+    background-color: var(--bg-color);
+    color:var(--text-color);
+
+}
+nav{
+    position:fixed;
+    top:0;
+    right:0;
+    width:100%;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:13px 6%;
+    background: #000;
+    z-index: 11111;
+
+
+}
+.navlist{
+    display:flex;
+}
+.navlist a{
+    position: relative;
+    color:var(--text-color);
+    padding: 3px 5px;
+    float: left;
+    left: 60px;
+    font-size:  14px;
+}
+.navlist a:after{
+    content:'';
+    position: absolute;
+    left:50%;
+   
+    height: 2px;
+    background:rgb(216, 12, 12) ;
+    transform: translateX(-50%);
+    transition: .2s ease-out;
+}
+.navlist a:hover::after,
+.navlist a:hover::after{
+    width: 70%;
+}
+nav .logo{
+    color:var(--text-color);
+    font-size: 22px;
+    font-weight: bold;
+}
+nav .logo span{
+    color:rgb(216, 12, 12);
+
+
+}
+.menu-btn img{
+    filter: invert(100%);
+    width:20px;
+    vertical-align: center;
+    cursor: pointer;
+    z-index: 11111;
+    display: none;
+   
+}
+
+.right-btn a{
+    color: var(--text-color);
+    padding:7px 10px;
+    border: 1px solid var(--bg-color);
+    border-radius: 15px;
+    font-size: 13px;
+    font-weight: 500;
+    transition: .4s ease-out;
+}
+.right-btn .sign-in{
+    background: rgb(235, 11, 11);
+}
+.right-btn .sign-in:hover{
+    background: transparent;
+    border: 1px solid var(--secondary-bg-color)
+}
+/********************home**************/
+section{
+    padding: 20px;
+    display: block;
+
+}
+.home-content{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   gap:40px;
+   padding: 80px 50px 20px;
+}
+.home-content .left-side{
+    width: calc(50%-40px);
+
+}
+.home-content .image-shape{
+    position: absolute;
+    height: 340px;
+    width: 250px;
+     background-color:rgb(216, 12, 12);
+     clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+
+}
+.home-content .left-side img{
+    height: 350px;
+    padding: 20px 30px;
+    position: relative;
+}
+.home-content .right-side .name{
+    font-size: 35px;
+
+}
+.home-content .name span{
+    font-size: 50px;
+    color:rgb(216, 12, 12);
+    letter-spacing:2px;
+    font-family: sans-serif;
+}
+button{
+    color: #fff;
+}
+.home-content .right-side button{
+    background: rgb(216, 12, 12);
+    font-size: 15px;
+    padding: 5px 22px;
+    display: inline-block;
+    color:var(--text-color);
+    margin: 10px 0;
+    border-radius: 25px;
+    border: 1px solid rgb(216, 12, 12);
+    transition: .4s ease-out;
+   
+
+}
+button .main-btn:hover{
+    background: transparent;
+
+}
+.home-content .stats li{
+    border:1px solid#000;
+    margin:5px;
+    padding:20px 10px;
+    width: 200px;
+    display: flex;
+    cursor:default;
+    flex-direction: row;
+    font-size: 14px;
+}
+.home-content .stats li:hover{
+    transform:scale(1.02);
+}
+.home-content .status li span{
+    font-size: 20px;
+}
+@media (max-width:980px){
+    .home-content{
+  
+   padding: 80px 50px 20px;
+    }
+    .right-btn .sign-up{
+        display: none;
+    }
+    .home-content .name span{
+        font-size: 40px;
+    }
+
+    .home-content .right-btn .name{
+        font-size: 30px;
+    }
+}
+   @media (max-width:900px) {
+    .home-content{
+        padding: 80px 50px 20px;
+    }
+    .home-content .left-side{
+        width:100%
+    }
+    .home-content .right-btn{
+        width:100%;
+    }
+    .navlist a{
+      
+        padding : 10px ;
+    }
+}
+@media(max-width:750px) {
+    .menu-btn img{
+        display: block;
+    }
+    .navlist{
+        position:absolute;
+        top:-600;
+        left:0;
+        right:0;
+        text-align: center;
+        background: rgb(216, 12, 12);
+        display:flex;
+        flex-direction: column;
+    }
+    .navlist a{
+        padding:10px 0;
+        display: block;
+        text-align: center;
+        font-weight: 300;
+        transition: .3s ease-out;
+    }
+    .navlist a:hover{
+        color: var(--bg-color);
+    }
+    .navlist .active{
+       top:100%;
+    }
+}
